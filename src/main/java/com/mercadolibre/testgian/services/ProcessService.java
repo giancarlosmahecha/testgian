@@ -16,15 +16,17 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class ProcessService implements IProcess {
-    /* private Point2D kenobiSatellite= new Point2D.Double(-500.5d,-200);
+     private Point2D kenobiSatellite= new Point2D.Double(-500.5d,-200);
      private Point2D skywalkerSatellite= new Point2D.Double(100,-100);
      private Point2D satoSatellite= new Point2D.Double(500,100);
-     */
 
 
-     private Point2D kenobiSatellite= new Point2D.Double(5d,4);
+
+     /*private Point2D kenobiSatellite= new Point2D.Double(5d,4);
      private Point2D skywalkerSatellite= new Point2D.Double(4,-3);
      private Point2D satoSatellite= new Point2D.Double(-4,13);
+     */
+
 
     private double kenobiSkywalkerDistance;
     private double kenobiSatoDistance;

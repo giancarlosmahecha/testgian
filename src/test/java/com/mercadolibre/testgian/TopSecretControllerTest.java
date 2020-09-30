@@ -34,8 +34,6 @@ public class TopSecretControllerTest {
         mockMvc= MockMvcBuilders.standaloneSetup(topSecretController).build();
     }
 
-
-
     @Test
     public void TopSecret() throws Exception
     {
@@ -44,21 +42,21 @@ public class TopSecretControllerTest {
         Satellite satelliteKenobi = new Satellite();
         SatelliteWrapper satelliteWrapp = new SatelliteWrapper();
         satelliteKenobi.setName("kenobi");
-        satelliteKenobi.setDistance(1000.0f);
+        satelliteKenobi.setDistance(5f);
         String[] arrMessagekenobi= {"este","","","mensaje",""};
         satelliteKenobi.setMessage(arrMessagekenobi);
         listSatellite.add(satelliteKenobi);
 
         Satellite satelliteSkywalker = new Satellite();
         satelliteSkywalker.setName("skywalker");
-        satelliteSkywalker.setDistance(1150.5f);
+        satelliteSkywalker.setDistance(5f);
         String[] arrMessageSkywalker= {"","es","","","secreto"};
         satelliteSkywalker.setMessage(arrMessageSkywalker);
         listSatellite.add(satelliteSkywalker);
 
         Satellite satelliteSato = new Satellite();
         satelliteSato.setName("sato");
-        satelliteSato.setDistance(1420.7f);
+        satelliteSato.setDistance(13f);
         String[] arrMessageSato= {"este","","un","",""};
         satelliteSato.setMessage(arrMessageSato);
         listSatellite.add(satelliteSato);
@@ -72,8 +70,8 @@ public class TopSecretControllerTest {
             .accept(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.status().isOk())
             .andExpect(jsonPath("$.message", Matchers.is("este es un mensaje secreto")))
-                .andExpect(jsonPath("$.position.x", Matchers.is(-458.0)))
-                .andExpect(jsonPath("$.position.y", Matchers.is(-221.0)))
+                .andExpect(jsonPath("$.position.x", Matchers.is(1.0)))
+                .andExpect(jsonPath("$.position.y", Matchers.is(1.0)))
                 ;
     }
     public static String asJsonString(final Object obj) {

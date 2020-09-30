@@ -37,17 +37,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UnitTesting extends TestgianApplication{
 
-
-    @Autowired
-    private WebApplicationContext webApplicationContext;
-    @Autowired
-    private MockMvc mockMvc;
-
-   /*@Before
-    public void setup() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-    }*/
-
     @Test
     @DisplayName("Distance test")
     public void testDistance() throws Exception
@@ -56,7 +45,7 @@ public class UnitTesting extends TestgianApplication{
         Point2D pointA=new Point2D.Double(-1200,-200);
         Point2D pointB=new Point2D.Double(100,-100);
         double distance=tools.getDistance(pointA,pointB);
-        assertEquals (distance,distance);
+        assertEquals (distance,1303.8404541015625);
     }
 }
 
