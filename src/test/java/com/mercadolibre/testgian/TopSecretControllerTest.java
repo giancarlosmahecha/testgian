@@ -1,7 +1,6 @@
 package com.mercadolibre.testgian;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mercadolibre.testgian.daos.SatelliteRepository;
 import com.mercadolibre.testgian.entities.Satellite;
 import com.mercadolibre.testgian.entities.SatelliteWrapper;
 import com.mercadolibre.testgian.rest.TopSecretController;
@@ -10,7 +9,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
-
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -20,10 +18,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 public class TopSecretControllerTest {
